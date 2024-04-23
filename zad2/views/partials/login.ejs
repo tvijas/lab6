@@ -1,0 +1,10 @@
+
+<form action="/user/set" method="POST">
+    <label for="userId">User</label>
+    <select name="userId" id="userId">
+        <% users.forEach(user => { %>
+            <option value="<%= user.id %>"><%= user.login %></option>
+        <% }); %>
+    </select>
+    <button type="submit">Set user</button>
+</form>
